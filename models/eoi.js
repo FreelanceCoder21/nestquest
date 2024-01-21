@@ -14,8 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   EOI.init({
-    name: DataTypes.STRING,
-    type: DataTypes.STRING
+    name: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'EOI',

@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 
-export const sequelize = new Sequelize("nestquest", "root", "1234", {
+export const sequelize = new Sequelize("nestquest", "root", "root", {
   host: "localhost",
   dialect: "postgres",
 });
