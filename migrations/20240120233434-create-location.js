@@ -12,6 +12,24 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      cityId:{
+        type:Sequelize.INTEGER,
+        references:{
+          model:'Cities',
+          key:"id"
+        },
+        onDelete:"CASCADE",
+        onUpdate:"CASCADE"
+      },
+      regionId:{
+        type:Sequelize.INTEGER,
+        references:{
+          model:'Regions',
+          key:"id"
+        },
+        onDelete:"CASCADE",
+        onUpdate:"CASCADE"
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -12,6 +12,32 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      userId: {
+        type:Sequelize.INTEGER,
+        allowNull:true,
+        references:{
+          model:'Users',
+          key:"id"
+        },
+        onDelete:"CASCADE",
+        onUpdate:"CASCADE"
+      },
+
+  //doubt
+      // agentId: {
+      //   type:Sequelize.INTEGER,
+      //   allowNull:true,
+      //   references:{
+      //     model:'Agents',
+      //     key:"id"
+      //   },
+      //   onDelete:"CASCADE",
+      //   onUpdate:"CASCADE"
+      // },
+
+      message: {
+        type: Sequelize.TEXT 
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

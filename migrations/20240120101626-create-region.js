@@ -14,9 +14,12 @@ module.exports = {
       },
       cityId:{
         type:Sequelize.INTEGER,
-      },
-      regionId:{
-        type:Sequelize.INTEGER
+        references:{
+          model:'Cities',
+          key:"id"
+        },
+        onDelete:"CASCADE",
+        onUpdate:"CASCADE"
       },
       createdAt: {
         allowNull: false,
