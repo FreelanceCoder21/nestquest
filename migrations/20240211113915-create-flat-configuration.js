@@ -2,32 +2,31 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('product-key-offers', {
+    await queryInterface.createTable('FlatConfigurations', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      productId: {
+      productFlatId:{
         type:Sequelize.INTEGER,
         allowNull:false,
         references:{
-          model:'Products',
+          model:'ProductFlats',
           key:"id"
         },
         onDelete:"CASCADE",
         onUpdate:"CASCADE"
       },
-      offerId: {
+      price:{
         type:Sequelize.INTEGER,
-        allowNull:false,
-        references:{
-          model:'Offers',
-          key:"id"
-        },
-        onDelete:"CASCADE",
-        onUpdate:"CASCADE"
+      },
+      size:{
+        type:Sequelize.STRING,
+      },
+      balcony:{
+        type:Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,
@@ -40,6 +39,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('product-key-offers');
+    await queryInterface.dropTable('FlatConfigurations');
   }
 };

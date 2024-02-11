@@ -161,16 +161,16 @@ module.exports = {
         type:Sequelize.STRING,
         allowNull:false
       },
-      offerIds:{
-        type:Sequelize.ARRAY(Sequelize.STRING),
-        allowNull:false,
-        references:{
-          model:'Offers',
-          key:"id"
-        },
-        onDelete:"CASCADE",
-        onUpdate:"CASCADE"
-      },
+      // offerIds:{
+      //   type:Sequelize.ARRAY(Sequelize.STRING),
+      //   allowNull:false,
+      //   references:{
+      //     model:'Offers',
+      //     key:"id"
+      //   },
+      //   onDelete:"CASCADE",
+      //   onUpdate:"CASCADE"
+      // },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
