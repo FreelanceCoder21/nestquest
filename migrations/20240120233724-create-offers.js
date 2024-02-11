@@ -12,6 +12,12 @@ module.exports = {
       name: {
         type: Sequelize.TEXT
       },
+      offerType: {
+        type: Sequelize.String
+      },
+      offeredBy: {
+        type: Sequelize.String
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

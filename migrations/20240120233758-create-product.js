@@ -73,16 +73,16 @@ module.exports = {
         onDelete:"CASCADE",
         onUpdate:"CASCADE"
       },
-      amenitiesIds:{
-        type:Sequelize.ARRAY(Sequelize.INTEGER),
-        allowNull:false,
-        references:{
-          model:'Amenities',
-          key:"id"
-        },
-        onDelete:"CASCADE",
-        onUpdate:"CASCADE"
-      },
+      // amenitiesIds:{
+      //   type:Sequelize.ARRAY(Sequelize.INTEGER),
+      //   allowNull:false,
+      //   references:{
+      //     model:'Amenities',
+      //     key:"id"
+      //   },
+      //   onDelete:"CASCADE",
+      //   onUpdate:"CASCADE"
+      // },
       paymentPlanId:{
         type:Sequelize.INTEGER,
         allowNull:false,
@@ -97,46 +97,46 @@ module.exports = {
         type:Sequelize.STRING,
         allowNull:false
       },
-      offDaysIds:{
-        type:Sequelize.ARRAY(Sequelize.INTEGER),
-        allowNull:false,
-        references:{
-          model:'Offdays',
-          key:"id"
-        },
-        onDelete:"CASCADE",
-        onUpdate:"CASCADE"
-      },
-      flatIds:{
-        type:Sequelize.ARRAY(Sequelize.INTEGER),
-        allowNull:false,
-        references:{
-          model:'Flats',
-          key:"id"
-        },
-        onDelete:"CASCADE",
-        onUpdate:"CASCADE"
-      },
-      slotIds:{
-        type:Sequelize.ARRAY(Sequelize.INTEGER),
-        allowNull:false,
-        references:{
-          model:'Slots',
-          key:"id"
-        },
-        onDelete:"CASCADE",
-        onUpdate:"CASCADE"
-      },
-      faqIds:{
-        type:Sequelize.ARRAY(Sequelize.INTEGER),
-        allowNull:false,
-        references:{
-          model:'FAQs',
-          key:"id"
-        },
-        onDelete:"CASCADE",
-        onUpdate:"CASCADE"
-      },
+      // offDaysIds:{
+      //   type:Sequelize.ARRAY(Sequelize.INTEGER),
+      //   allowNull:false,
+      //   references:{
+      //     model:'Offdays',
+      //     key:"id"
+      //   },
+      //   onDelete:"CASCADE",
+      //   onUpdate:"CASCADE"
+      // },
+      // flatIds:{
+      //   type:Sequelize.ARRAY(Sequelize.INTEGER),
+      //   allowNull:false,
+      //   references:{
+      //     model:'Flats',
+      //     key:"id"
+      //   },
+      //   onDelete:"CASCADE",
+      //   onUpdate:"CASCADE"
+      // },
+      // slotIds:{
+      //   type:Sequelize.ARRAY(Sequelize.INTEGER),
+      //   allowNull:false,
+      //   references:{
+      //     model:'Slots',
+      //     key:"id"
+      //   },
+      //   onDelete:"CASCADE",
+      //   onUpdate:"CASCADE"
+      // },
+      // faqIds:{
+      //   type:Sequelize.ARRAY(Sequelize.INTEGER),
+      //   allowNull:false,
+      //   references:{
+      //     model:'FAQs',
+      //     key:"id"
+      //   },
+      //   onDelete:"CASCADE",
+      //   onUpdate:"CASCADE"
+      // },
       possessionDate:{
         type:Sequelize.DATE,
         allowNull:false
@@ -145,16 +145,16 @@ module.exports = {
         type:Sequelize.DATE,
         allowNull:true
       },
-      keyHighLightIds:{
-        type:Sequelize.ARRAY(Sequelize.STRING),
-        allowNull:false,
-        references:{
-          model:'KeyHighlights',
-          key:"id"
-        },
-        onDelete:"CASCADE",
-        onUpdate:"CASCADE"
-      },
+      // keyHighLightIds:{
+      //   type:Sequelize.ARRAY(Sequelize.STRING),
+      //   allowNull:false,
+      //   references:{
+      //     model:'KeyHighlights',
+      //     key:"id"
+      //   },
+      //   onDelete:"CASCADE",
+      //   onUpdate:"CASCADE"
+      // },
       //images model
       //doubt
       geoLocation:{

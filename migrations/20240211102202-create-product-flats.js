@@ -2,31 +2,32 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Agents', {
+    await queryInterface.createTable('product-flats', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
-      },
-      active:{
-        type:Sequelize.BOOLEAN
-      },
-      cityId:{
+      productId: {
         type:Sequelize.INTEGER,
-        allowNull:true,
+        allowNull:false,
         references:{
-          model:'Cities',
+          model:'Products',
           key:"id"
         },
         onDelete:"CASCADE",
         onUpdate:"CASCADE"
       },
-      role:{
-        type: Sequelize.STRING,
+      flatId: {
+        type:Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:'Flats',
+          key:"id"
+        },
+        onDelete:"CASCADE",
+        onUpdate:"CASCADE"
       },
       createdAt: {
         allowNull: false,
@@ -39,6 +40,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Agents');
+    await queryInterface.dropTable('product-flats');
   }
 };
