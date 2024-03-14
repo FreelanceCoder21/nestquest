@@ -2,30 +2,32 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('ScheduleForms', {
+    await queryInterface.createTable('ScheduleFormFeedbacks', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      scheduleId: {
+      feedBackId: {
         type:Sequelize.INTEGER,
         allowNull:false,
         references: {
-          model:'Schedules',
+          model:'Feedbacks',
           key:"id"
         },
         onDelete:"CASCADE",
         onUpdate:"CASCADE"
       },
-      isSkipped: {
-        type:Sequelize.BOOLEAN,
-        allowNull:false
-      },
-      ratings: {
+      scheduleFormId: {
         type:Sequelize.INTEGER,
-        allowNull:false
+        allowNull:false,
+        references: {
+          model:'ScheduleForms',
+          key:"id"
+        },
+        onDelete:"CASCADE",
+        onUpdate:"CASCADE"
       },
       createdAt: {
         allowNull: false,
@@ -38,6 +40,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('ScheduleForms');
+    await queryInterface.dropTable('ScheduleFormFeedbacks');
   }
 };

@@ -70,7 +70,7 @@ module.exports = {
         onUpdate:"CASCADE"
       },
       type:{
-        type: Sequelize.String,
+        type: Sequelize.STRING,
         allowNull:false
       },
       createdAt: {

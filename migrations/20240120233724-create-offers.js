@@ -13,10 +13,10 @@ module.exports = {
         type: Sequelize.TEXT
       },
       offerType: {
-        type: Sequelize.String
+        type: Sequelize.STRING
       },
       offeredBy: {
-        type: Sequelize.String
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

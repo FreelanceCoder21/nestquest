@@ -57,7 +57,7 @@ const User = sequelize.define<UserInstance>("User", {
     allowNull: true,
   },
   cityId: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     allowNull: true,
     references: {
       model: "Cities", // Reference to the City model
